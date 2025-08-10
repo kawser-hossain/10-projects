@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Savour Real Seafood</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts for a serif font similar to the design -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900;1,400;1,700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom font family for headings */
+        .font-playfair {
+            font-family: 'Playfair Display', serif;
+        }
+        /* Custom CSS for a subtle transition effect on hover */
+        .hover-effect {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .hover-effect:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800 antialiased font-sans">
+
+    <!-- Header / Navigation Bar -->
+    <header class="fixed top-0 w-full z-50 text-white py-4 px-4 sm:px-6 lg:px-8 bg-black/30 backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="text-2xl font-playfair font-bold tracking-widest">
+                    <a href="#">SEAVERS</a>
+                </div>
+                <!-- Mobile menu button -->
+                <button id="menu-button" class="md:hidden text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+                <!-- Desktop Navigation Links and CTA -->
+                <nav class="hidden md:flex items-center space-x-8 text-sm uppercase tracking-wide font-semibold">
+                    <ul class="flex space-x-8">
+                        <li><a href="#" class="hover:text-gray-400">Home</a></li>
+                        <li><a href="#" class="hover:text-gray-400">Menu</a></li>
+                        <li><a href="#" class="hover:text-gray-400">About</a></li>
+                        <li><a href="#" class="hover:text-gray-400">Contact</a></li>
+                    </ul>
+                    <!-- CTA Button -->
+                    <a href="#" class="px-6 py-2 bg-white text-black font-semibold uppercase tracking-wide rounded-full hover:bg-gray-200 transition-colors">
+                        Book a Table
+                    </a>
+                </nav>
+            </div>
+            <!-- Mobile Navigation Menu (hidden by default) -->
+            <nav id="mobile-menu" class="hidden md:hidden mt-4 bg-black/50 rounded-lg p-4 text-center">
+                <ul class="flex flex-col space-y-4 text-lg">
+                    <li><a href="#" class="block hover:text-gray-400">Home</a></li>
+                    <li><a href="#" class="block hover:text-gray-400">Menu</a></li>
+                    <li><a href="#" class="block hover:text-gray-400">About</a></li>
+                    <li><a href="#" class="block hover:text-gray-400">Contact</a></li>
+                    <li>
+                        <a href="#" class="inline-block mt-4 px-6 py-2 bg-white text-black font-semibold uppercase tracking-wide rounded-full hover:bg-gray-200 transition-colors">
+                            Book a Table
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-[80vh] flex items-end justify-center text-center p-8 bg-cover bg-center pt-20"
+      style="background-image: url('images/Image_Cover.png');">
+        <div class="absolute inset-0 opacity-30"></div>
+        <h1 class="relative z-10 text-6xl md:text-8xl lg:text-9xl text-white font-playfair font-bold tracking-widest leading-none">
+            SAVOUR REAL SEAFOOD
+        </h1>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-16 md:py-24 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-12">
+            <!-- Text and Sub-heading -->
+            <div class="lg:w-1/2">
+                <h2 class="text-3xl md:text-4xl font-playfair font-semibold mb-4 text-center lg:text-left">
+                    The Art of Seafood
+                </h2>
+                <p class="text-lg text-gray-600 leading-relaxed text-center lg:text-left">
+                    Our master chefs, with decades of experience, are dedicated to perfecting the art of seafood cuisine. We believe that great food starts with the freshest ingredients, and we combine traditional techniques with modern innovation to create a truly unforgettable dining experience.
+                </p>
+            </div>
+            <!-- Image Collage with hover effect -->
+            <div class="lg:w-1/2 grid grid-cols-2 gap-4">
+                <img src="https://picsum.photos/seed/chef-plating/400/500" alt="A chef meticulously plating a dish." class="w-full h-auto rounded-lg shadow-lg col-span-2 md:col-span-1 object-cover hover-effect">
+                <img src="https://picsum.photos/seed/fresh-fish/400/500" alt="Freshly caught fish displayed on a bed of ice." class="w-full h-auto rounded-lg shadow-lg col-span-2 md:col-span-1 object-cover hover-effect">
+                <img src="https://picsum.photos/seed/kitchen-action/800/400" alt="A bustling kitchen scene with chefs at work." class="w-full h-auto rounded-lg shadow-lg col-span-2 object-cover hover-effect">
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Dish Section -->
+    <section class="bg-black text-white py-16 md:py-24 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="text-4xl md:text-5xl font-playfair font-bold mb-8">
+                SIGNATURE DISHES
+            </h2>
+            <img src="https://picsum.photos/seed/grilled-lobster/1000/600" alt="A perfectly grilled lobster with lemon wedges." class="mx-auto rounded-lg shadow-2xl hover-effect">
+            <p class="mt-8 text-xl max-w-3xl mx-auto leading-relaxed">
+                Experience our most celebrated dish, the grilled lobster. Sourced fresh daily, seasoned with our unique blend of spices, and grilled to bring out its natural sweetness and smoky flavor.
+            </p>
+        </div>
+    </section>
+
+    <!-- Dishes Grid Section -->
+    <section class="py-16 md:py-24 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-playfair font-semibold mb-12 text-center">
+                FRESH SEAFOOD DISHES
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <img src="https://picsum.photos/seed/seafood-pasta/600/400" alt="A bowl of fresh seafood pasta." class="w-full h-auto rounded-lg shadow-md object-cover hover-effect">
+                <img src="https://picsum.photos/seed/grilled-salmon/600/400" alt="Grilled salmon fillet with asparagus." class="w-full h-auto rounded-lg shadow-md object-cover hover-effect">
+                <img src="https://picsum.photos/seed/mussels/600/400" alt="A bowl of mussels in a white wine sauce." class="w-full h-auto rounded-lg shadow-md object-cover hover-effect">
+                <img src="https://picsum.photos/seed/spicy-shrimp/600/400" alt="Spicy shrimp stir-fry with peppers." class="w-full h-auto rounded-lg shadow-md object-cover hover-effect">
+                <img src="https://picsum.photos/seed/roasted-fish/600/400" alt="A whole roasted sea bass." class="w-full h-auto rounded-lg shadow-md object-cover hover-effect">
+                <img src="https://picsum.photos/seed/oyster-platter/600/400" alt="A platter of fresh oysters on a bed of ice." class="w-full h-auto rounded-lg shadow-md object-cover hover-effect">
+            </div>
+        </div>
+    </section>
+
+    <!-- Fresh Soups Section -->
+    <section class="py-16 md:py-24 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-playfair font-semibold mb-12 text-center">
+                FRESH SEAFOOD SOUPS
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <img src="https://picsum.photos/seed/seafood-chowder/600/400" alt="A hearty seafood chowder in a bread bowl." class="w-full h-auto rounded-lg shadow-md object-cover hover-effect">
+                <img src="https://picsum.photos/seed/spicy-fish-soup/600/400" alt="A spicy red fish soup with vegetables." class="w-full h-auto rounded-lg shadow-md object-cover hover-effect">
+                <img src="https://picsum.photos/seed/bouillabaisse/600/400" alt="A traditional French bouillabaisse." class="w-full h-auto rounded-lg shadow-md object-cover hover-effect">
+                <img src="https://picsum.photos/seed/lobster-bisque/600/400" alt="A creamy lobster bisque garnished with chives." class="w-full h-auto rounded-lg shadow-md object-cover hover-effect">
+            </div>
+        </div>
+    </section>
+
+    <!-- Restaurant Gallery Section -->
+    <section class="py-16 md:py-24 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-playfair font-semibold mb-12 text-center">
+                OUR ENVIRONMENT
+            </h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <img src="https://picsum.photos/seed/restaurant-dining/600/600" alt="A beautifully decorated restaurant dining room." class="rounded-lg shadow-lg col-span-2 md:col-span-1 object-cover hover-effect">
+                <img src="https://picsum.photos/seed/restaurant-table/600/600" alt="A close-up of an elegant table setting." class="rounded-lg shadow-lg col-span-1 object-cover hover-effect">
+                <img src="https://picsum.photos/seed/outdoor-patio/600/600" alt="An outdoor patio with string lights." class="rounded-lg shadow-lg col-span-1 object-cover hover-effect">
+                <img src="https://picsum.photos/seed/restaurant-bar/600/600" alt="A sleek, modern bar area with bottles on display." class="rounded-lg shadow-lg col-span-2 object-cover hover-effect">
+                <img src="https://picsum.photos/seed/private-dining/600/600" alt="A private dining room for special events." class="rounded-lg shadow-lg col-span-2 md:col-span-1 object-cover hover-effect">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12 px-4 sm:px-6 lg:px-8 text-center">
+        <p class="text-xl font-playfair font-semibold tracking-wide">
+            WE GET OUR PRODUCE ONLY FROM TRUSTED SUPPLIERS, ENSURING THE FRESHNESS AND HIGHEST QUALITY OF ALL OUR DISHES.
+        </p>
+    </footer>
+    
+    <script>
+        // JavaScript to handle the mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuButton = document.getElementById('menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (menuButton && mobileMenu) {
+                menuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
